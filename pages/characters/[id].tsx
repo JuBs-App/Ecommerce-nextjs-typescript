@@ -4,13 +4,14 @@ import { useRouter } from 'next/router'
 import Layout from '../../components/Layout'
 import imageLoader from '../../imageLoader'
 import { Character } from '../../types'
+import styles from '../../styles/Character.module.css'
 
 function CharacterPage({ character }: { character: Character }) {
   const router = useRouter()
 
   console.log('check', router.query)
   return (
-    <div>
+    <div className={styles.container}>
       <h1>{character.name}</h1>
       <Image
         loader={imageLoader}
