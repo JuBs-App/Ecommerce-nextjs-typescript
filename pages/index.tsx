@@ -24,6 +24,10 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"
+        />
       </Head>
 
       <hr />
