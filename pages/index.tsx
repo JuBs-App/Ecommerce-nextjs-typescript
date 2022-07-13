@@ -1,11 +1,17 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
-import imageLoader from '../imageLoader'
 import styles from '../styles/Home.module.css'
 import { Character, GetCharacterResults } from '../types'
-import { SimpleGrid, Stack, Text } from '@chakra-ui/react'
+import {
+  Button,
+  Heading,
+  Image,
+  SimpleGrid,
+  Stack,
+  Text,
+} from '@chakra-ui/react'
+import { Carousel } from 'react-bootstrap'
 
 const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
   return (
@@ -17,6 +23,10 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
           rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"
         />
       </Head>
 
@@ -81,8 +91,6 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
                 </a>
               </Link>
               <Image
-                loader={imageLoader}
-                unoptimized
                 src={character.image}
                 alt={character.name}
                 width="200"
