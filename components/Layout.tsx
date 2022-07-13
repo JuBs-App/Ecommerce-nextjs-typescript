@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React, { Children, ReactNode } from 'react'
 import {
   Image,
   Flex,
@@ -8,20 +8,64 @@ import {
   Stack,
   IconButton,
   Box,
+  useDisclosure,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { css } from '@emotion/react'
 import Link from 'next/link'
+import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 // import { Avatar, Badge } from 'antd'
 
+const Links = [
+  {
+    name: 'Home',
+    path: '/',
+  },
+  {
+    name: 'Contact Us',
+    path: '/contact-us',
+  },
+  {
+    name: 'About Us',
+    path: '/about-us',
+  },
+  {
+    name: 'Login',
+    path: '/login',
+  },
+]
+
+const NavLink = ({ children, path }: { children: ReactNode; path: string }) => (
+  <Box
+    px={2}
+    py={1}
+    rounded={'md'}
+    _hover={{
+      textDecoration: 'none',
+      bg: useColorModeValue('gray.200', 'gray.700'),
+    }}
+  >
+    <Link href={path}>{children}</Link>
+  </Box>
+)
+
 function Layout({ children }: { children: React.ReactNode }) {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Stack>
       <chakra.header id="header">
         <Flex w="100%" px="6" py="5" align="center" justify="space-between">
+          <IconButton
+            size={'md'}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
+            onClick={isOpen ? onClose : onOpen}
+          />
           <Image src={'/logo.png'} h="50px" />
 
-          <HStack as="nav" spacing="5">
+          <HStack as="nav" spacing="5" display={{ base: 'none', md: 'flex' }}>
             <Link href="/">
               <Button variant="nav"> Home </Button>
             </Link>
@@ -84,6 +128,17 @@ function Layout({ children }: { children: React.ReactNode }) {
             />
           </HStack>
         </Flex>
+        {isOpen ? (
+          <Box pb={4} display={{ md: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
+              {Links.map(({ name, path }) => (
+                <NavLink key={path} path={path}>
+                  {name}
+                </NavLink>
+              ))}
+            </Stack>
+          </Box>
+        ) : null}
       </chakra.header>
       {children}
     </Stack>
