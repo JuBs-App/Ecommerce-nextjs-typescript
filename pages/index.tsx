@@ -81,7 +81,7 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      <SimpleGrid columns={3} spacing={5}>
+      {/* <SimpleGrid columns={3} spacing={5}>
         {characters.map((character) => {
           return (
             <Stack key={character.id}>
@@ -99,19 +99,17 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
             </Stack>
           )
         })}
-      </SimpleGrid>
+      </SimpleGrid> */}
     </Stack>
   )
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await fetch('https://rickandmortyapi.com/api/character')
-
-  const { results }: GetCharacterResults = await res.json()
-
+  // const res = await fetch('https://rickandmortyapi.com/api/character')
+  // const { results }: GetCharacterResults = await res.json()
   return {
     props: {
-      characters: results,
+      characters: [],
     },
   }
 }
