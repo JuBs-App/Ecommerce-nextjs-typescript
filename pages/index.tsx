@@ -37,6 +37,7 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
             className="d-block w-100"
             src="/cold-pressed-coconut-oil-80.jpg"
             alt="First slide"
+            height="450px"
           />
           <Carousel.Caption>
             <Heading as="h1" size="4xl" noOfLines={1}>
@@ -52,6 +53,7 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
             className="d-block w-100"
             src="/cold-pressed-groundnut-oil-70.jpg"
             alt="Second slide"
+            height="450px"
           />
           <Carousel.Caption>
             <Heading as="h1" size="4xl" noOfLines={1}>
@@ -67,6 +69,7 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
             className="d-block w-100"
             src="/cold-pressed-mustard-oil-70.jpg"
             alt="Third slide"
+            height="450px"
           />
           <Carousel.Caption>
             <Heading as="h1" size="4xl" noOfLines={1}>
