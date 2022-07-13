@@ -39,14 +39,14 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
             alt="First slide"
             height="450px"
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <Heading as="h1" size="4xl" noOfLines={1}>
               cold pressed coconut oil
             </Heading>
-            {/* <a href="#services"> */}
+            <a href="#services">
             <Button className="book-btn">Book Now</Button>
-            {/* </a> */}
-          </Carousel.Caption>
+            </a>
+          </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item interval={1000}>
           <Image
@@ -55,14 +55,14 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
             alt="Second slide"
             height="450px"
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <Heading as="h1" size="4xl" noOfLines={1}>
               cold pressed groundnut oil
             </Heading>
-            {/* <a href="#services"> */}
+            <a href="#services">
             <Button className="book-btn">Book Now</Button>
-            {/* </a> */}
-          </Carousel.Caption>
+            </a>
+          </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item interval={1000}>
           <Image
@@ -71,14 +71,15 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
             alt="Third slide"
             height="450px"
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <Heading as="h1" size="4xl" noOfLines={1}>
               cold pressed mustard oil
             </Heading>
-            {/* <a href="#services"> */}
+            <a href="#services">
             <Button className="book-btn">Book Now</Button>
-            {/* </a> */}
-          </Carousel.Caption>
+            </a>
+          </Carousel.Caption> 
+          */}
         </Carousel.Item>
       </Carousel>
       {/* <SimpleGrid columns={3} spacing={5}>
