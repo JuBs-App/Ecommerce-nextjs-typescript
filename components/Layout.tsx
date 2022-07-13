@@ -6,10 +6,13 @@ import {
   HStack,
   chakra,
   Stack,
-  Badge,
+  IconButton,
+  Box,
 } from '@chakra-ui/react'
+import { css } from '@emotion/react'
 import Link from 'next/link'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
+// import { Avatar, Badge } from 'antd'
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -34,9 +37,51 @@ function Layout({ children }: { children: React.ReactNode }) {
           </HStack>
 
           <HStack>
-            <Badge color="secondary">
-              <AiOutlineShoppingCart />
-            </Badge>
+            {/* <Badge
+              count={5}
+              style={{
+                position: 'absolute',
+                right: 0,
+                top: 0,
+                backgroundColor: '#e01709',
+              }}
+            >
+              <Avatar
+                shape="square"
+                size="large"
+                style={{ backgroundColor: '#e01709' }}
+              >
+                <AiOutlineShoppingCart />
+              </Avatar>
+            </Badge> */}
+            <IconButton
+              css={css`
+                position: relative !important;
+              `}
+              py={'2'}
+              colorScheme={'gray'}
+              aria-label={'Notifications'}
+              size={'lg'}
+              icon={
+                <>
+                  <AiOutlineShoppingCart color={'gray.750'} />
+                  <Box
+                    as={'span'}
+                    color={'white'}
+                    position={'absolute'}
+                    top={'6px'}
+                    right={'4px'}
+                    fontSize={'0.7rem'}
+                    bgColor={'red'}
+                    borderRadius={'10px'}
+                    zIndex={9999}
+                    p={'1px'}
+                  >
+                    {5}
+                  </Box>
+                </>
+              }
+            />
           </HStack>
         </Flex>
       </chakra.header>
