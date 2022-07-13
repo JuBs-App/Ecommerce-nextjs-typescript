@@ -21,6 +21,56 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
       </Head>
 
       <hr />
+      <Carousel fade>
+        <Carousel.Item interval={1000}>
+          <Image
+            className="d-block w-100"
+            src="/cold-pressed-coconut-oil-80.jpg"
+            alt="First slide"
+            height="450px"
+          />
+          <Carousel.Caption>
+            <Heading as="h1" size="4xl" noOfLines={1}>
+              cold pressed coconut oil
+            </Heading>
+            {/* <a href="#services"> */}
+            <Button className="book-btn">Book Now</Button>
+            {/* </a> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={1000}>
+          <Image
+            className="d-block w-100"
+            src="/cold-pressed-groundnut-oil-70.jpg"
+            alt="Second slide"
+            height="450px"
+          />
+          <Carousel.Caption>
+            <Heading as="h1" size="4xl" noOfLines={1}>
+              cold pressed groundnut oil
+            </Heading>
+            {/* <a href="#services"> */}
+            <Button className="book-btn">Book Now</Button>
+            {/* </a> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={1000}>
+          <Image
+            className="d-block w-100"
+            src="/cold-pressed-mustard-oil-70.jpg"
+            alt="Third slide"
+            height="450px"
+          />
+          <Carousel.Caption>
+            <Heading as="h1" size="4xl" noOfLines={1}>
+              cold pressed mustard oil
+            </Heading>
+            {/* <a href="#services"> */}
+            <Button className="book-btn">Book Now</Button>
+            {/* </a> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
       <SimpleGrid columns={3} spacing={5}>
         {characters.map((character) => {
           return (
