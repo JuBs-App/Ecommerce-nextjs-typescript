@@ -53,7 +53,7 @@ const NavLink = ({ children, path }: { children: ReactNode; path: string }) => (
 function Layout({ children }: { children: React.ReactNode }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
-    <Stack>
+    <Stack backgroundColor="#9dfaf7">
       <chakra.header id="header">
         <Flex w="100%" px="6" py="5" align="center" justify="space-between">
           <IconButton
@@ -103,7 +103,8 @@ function Layout({ children }: { children: React.ReactNode }) {
                 position: relative !important;
               `}
               py={'2'}
-              colorScheme={'gray'}
+              colorScheme={'#9dfaf7'}
+              color="black"
               aria-label={'Notifications'}
               size={'lg'}
               icon={
