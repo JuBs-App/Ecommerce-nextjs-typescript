@@ -82,25 +82,204 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
           */}
         </Carousel.Item>
       </Carousel>
-      {/* <SimpleGrid columns={3} spacing={5}>
-        {characters.map((character) => {
-          return (
-            <Stack key={character.id}>
-              <Link href={`/characters/${character.id}`}>
-                <a>
-                  <Text fontSize="xs">{character.name}</Text>
-                </a>
-              </Link>
-              <Image
-                src={character.image}
-                alt={character.name}
-                width="200"
-                height="200"
-              />
-            </Stack>
-          )
-        })}
-      </SimpleGrid> */}
+      <Stack textAlign="center">
+        <Text fontSize="5xl" fontWeight="bold" mt="50px !important">
+          From Farm to Fork
+        </Text>
+      </Stack>
+      <SimpleGrid columns={[1, 2, 4, 4]} spacing={5} p="10px">
+        <Stack p="5px" alignItems="center">
+          <Card height="100%" backgroundColor="#cc8d89">
+            <Image
+              src="/handpicked-ingredients.jpg"
+              alt="handpicked-ingredients"
+              width="100px"
+              height="100px"
+            />
+            <Text fontSize="s" fontWeight="bold" textAlign="center">
+              Ingredients chosen with care
+            </Text>
+            <Text fontSize="s" p="10px" textAlign="center">
+              Ingredients sourced locally and free of genetically engineered
+              organisms
+            </Text>
+          </Card>
+        </Stack>
+
+        <Stack p="5px" alignItems="center">
+          <Card height="100%" backgroundColor="#cc8d89">
+            <Image
+              src="/carbon-footprint.jpg"
+              alt="carbon-footprint"
+              width="100px"
+              height="100px"
+            />
+            <Text fontSize="s" fontWeight="bold" textAlign="center">
+              Lowest Carbon Footprint
+            </Text>
+            <Text fontSize="s" p="10px" textAlign="center">
+              Conventional environmentally friendly agriculture and
+              agro-processing methods to reduce emissions & pollutants.
+            </Text>
+          </Card>
+        </Stack>
+        <Stack p="5px" alignItems="center">
+          <Card height="100%" backgroundColor="#cc8d89">
+            <Image
+              src="/empowerment.jpg"
+              alt="empowerment"
+              width="100px"
+              height="100px"
+            />
+            <Text fontSize="s" fontWeight="bold" textAlign="center">
+              Farmer Empowerment
+            </Text>
+            <Text fontSize="s" p="10px" textAlign="center">
+              Support the livelihood and well-being of local farmers, as well as
+              training and employment opportunities for rural Indians,
+              particularly women.
+            </Text>
+          </Card>
+        </Stack>
+        <Stack p="5px" alignItems="center">
+          <Card height="100%" backgroundColor="#cc8d89">
+            <Image
+              src="/package.jpg"
+              alt="package"
+              width="100px"
+              height="100px"
+            />
+            <Text fontSize="s" fontWeight="bold" textAlign="center">
+              Lovingly Packed and Delivered
+            </Text>
+            <Text fontSize="s" p="10px" textAlign="center">
+              Genuine food goods that are hygienically packed, hand-labelled,
+              and carefully delivered to ensure the finest consumer experience.
+            </Text>
+          </Card>
+        </Stack>
+      </SimpleGrid>
+
+      <SimpleGrid columns={[1, 1, 2, 2]} spacing={5} mt="100px !important">
+        <Image src="/flour.png" alt="flour" width="100%" height="100%" />
+        <Stack>
+          <Card backgroundColor="#cc8d89">
+            <Text fontSize="s" fontWeight="bold" textAlign="center">
+              WHY GOA NATURALS?
+            </Text>
+            <SimpleGrid columns={[1, 2, 3, 3]} spacing={5}>
+              <Stack p="5px" alignItems="center">
+                <Image
+                  src="/onlybest-90.png"
+                  alt="onlybest"
+                  width="100px"
+                  height="100px"
+                />
+                <Text fontSize="s" fontWeight="bold" textAlign="center">
+                  Only Best Ingredients
+                </Text>
+                <Text fontSize="s" p="10px" textAlign="center">
+                  To create real products, we use carefully selected ingredients
+                  and unrefined, chemical-free sanitary techniques.
+                </Text>
+              </Stack>
+              <Stack p="5px" alignItems="center">
+                <Image
+                  src="/traditional-90.png"
+                  alt="traditional"
+                  width="100px"
+                  height="100px"
+                />
+                <Text fontSize="s" fontWeight="bold" textAlign="center">
+                  Traditions Renewed
+                </Text>
+                <Text fontSize="s" p="10px" textAlign="center">
+                  To encourage local craft, procedures such as cold pressing,
+                  stone grinding, mortar and pestle, sun drying, and so on are
+                  used.
+                </Text>
+              </Stack>
+              <Stack p="5px" alignItems="center">
+                <Image
+                  src="/nutritive-90.png"
+                  alt="nutritive"
+                  width="100px"
+                  height="100px"
+                />
+                <Text fontSize="s" fontWeight="bold" textAlign="center">
+                  Superior Nutrition
+                </Text>
+                <Text fontSize="s" p="10px" textAlign="center">
+                  Food that is natural, whole, and unrefined retains more
+                  nutrients than food that is manufactured conventionally.
+                </Text>
+              </Stack>
+              <Stack p="5px" alignItems="center">
+                <Image
+                  src="/residue-free-90.png"
+                  alt="residue-free"
+                  width="100px"
+                  height="100px"
+                />
+                <Text fontSize="s" fontWeight="bold" textAlign="center">
+                  Residue-Free
+                </Text>
+                <Text fontSize="s" p="10px" textAlign="center">
+                  After processing, all by-products are fed to livestock,
+                  leaving nothing behind.
+                </Text>
+              </Stack>
+              <Stack p="5px" alignItems="center">
+                <Image
+                  src="/sustainable-90.png"
+                  alt="sustainable"
+                  width="100px"
+                  height="100px"
+                />
+                <Text fontSize="s" fontWeight="bold" textAlign="center">
+                  Sustainability
+                </Text>
+                <Text fontSize="s" p="10px" textAlign="center">
+                  Encourages organic, natural farming methods that benefit and
+                  safeguard Mother Nature.
+                </Text>
+              </Stack>
+              <Stack p="5px" alignItems="center">
+                <Image
+                  src="/and-only-best-90.png"
+                  alt="and-only-best"
+                  width="100px"
+                  height="100px"
+                />
+                <Text fontSize="s" fontWeight="bold" textAlign="center">
+                  The Best Only
+                </Text>
+                <Text fontSize="s" p="10px" textAlign="center">
+                  Our goal is to develop not only the best products, but also
+                  the best way of life.
+                </Text>
+              </Stack>
+            </SimpleGrid>
+          </Card>
+        </Stack>
+      </SimpleGrid>
+    </Stack>
+  )
+}
+
+const Card = ({ children, ...props }: any) => {
+  return (
+    <Stack
+      p={8}
+      borderRadius="md"
+      bg="white"
+      boxShadow="md"
+      borderColor="gray.200"
+      borderWidth={1}
+      alignItems="center"
+      {...props}
+    >
+      {children}
     </Stack>
   )
 }
